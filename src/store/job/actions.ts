@@ -1,29 +1,20 @@
-import { Job, CREATE_JOB, DELETE_JOB, JobActionTypes } from './types'
+import { Job, CREATE_JOB, DELETE_JOB, JobActions } from './types'
 
-export function createJob(newJob: Job): JobActionTypes {
+export function createJob(job: Job, indexJob: number): JobActions {
   return {
     type: CREATE_JOB,
-    payload: newJob,
+    payload: job,
+    meta: {
+      indexJob,
+    },
   };
 }
 
-export function randomJob(): JobActionTypes {
-  const newJob: Job = {
-    name: 'hi',
-    reward: 'dhidf',
-    phone: '1-29090=-2033',
-  };
-  return {
-    type: CREATE_JOB,
-    payload: newJob,
-  };
-}
-
-export function deleteJob(jobId: number): JobActionTypes {
+export function deleteJob(indexJob: number): JobActions {
   return {
     type: DELETE_JOB,
     meta: {
-      jobId,
+      indexJob,
     },
   };
 }

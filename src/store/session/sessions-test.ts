@@ -1,0 +1,86 @@
+const SESSIONS: ISession[] = [
+  {
+    "screen": "day1",
+    "duration": 120,
+    "forms": ["charity"],
+    "count": 5,
+    "wait": true,
+  },
+  {
+    "screen": "day2",
+    "duration": 180,
+    "forms": ["charity, resort"],
+    "count": 8,
+  },
+  {
+    "screen": "day3",
+    "duration": 180,
+    "forms": ["charity, resort, credit, sweeps"],
+    "count": 15,
+  },
+  {
+    "screen": "day4",
+    "duration": 180,
+    "forms": ["charity, resort, credit, sweeps, screws, auto"],
+    "count": 15,
+  },
+  {
+    "screen": "day5",
+    "duration": 180,
+    "forms": ["charity, resort, credit, sweeps, screws, auto"],
+    "count": 15,
+  },
+  {
+    "screen": "day6",
+    "duration": 180,
+    "forms": ["resort, credit, sweeps, screws, auto"],
+    "count": 15,
+  },
+  {
+    "screen": "day7",
+    "duration": 30,
+    "forms": [],
+    "count": 0,
+  },
+  {
+    "screen": "day8",
+    "duration": 30,
+    "forms": [],
+    "count": 0,
+  },
+  {
+    "screen": "day9",
+    "duration": 120,
+    "forms": ["kia"],
+    "count": 15,
+    "wait": true,
+  },
+  {
+    "screen": "daya",
+    "duration": 120,
+    "forms": ["kia"],
+    "count": 15,
+  },
+  {
+    "screen": "dayb",
+    "duration": 30,
+    "forms": [],
+    "count": 0,
+  },
+];
+
+export interface ISession {
+  screen: string;
+  duration: number;
+  forms: string[];
+  count: number;
+  wait?: boolean;
+}
+
+class Session {
+  static allSessions: ISession[] = SESSIONS;
+  static currentSession: Session;
+  static getCurrentSesstion(): void {
+
+  }
+}
